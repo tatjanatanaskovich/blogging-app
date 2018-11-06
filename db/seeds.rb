@@ -4,6 +4,7 @@ User.create!(
   password: "asdfasdf",
   password_confirmation: "asdfasdf",
   name: "Admin User",
+  roles: "site_admin"
   
 )
 puts "1 Admin user created"

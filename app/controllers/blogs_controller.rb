@@ -1,8 +1,13 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :change_blog_status]
+  access all: [:show, :index], user: {except: [:destroy]}, site_admin: :all
 
   def index
-    @blogs = Blog.all
+    if logged_in?(:user)
+      @blogs = Blog.all
+    else
+      @blogs = Blog.published
+    end
   end
 
   def show
@@ -16,13 +21,18 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = Blog.new(blog_params)
-    @blog.user = current_user
-    if @blog.save
-      notice = 'Blog was successfully created.'
-      redirect_to @blog, notice: notice
+    if logged_in?(:user)
+      @blog = Blog.new(blog_params)
+      @blog.user = current_user
+      if @blog.save
+        notice = 'Blog was successfully created.'
+        redirect_to @blog, notice: notice
+      else
+        render :new 
+      end
     else
-      render :new 
+      notice = 'Only registered users can write a post'
+      redirect_to new_user_registration_path, notice: notice
     end
   end
 
