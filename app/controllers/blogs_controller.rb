@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :change_blog_status]
   access all: [:show, :index], user: {except: [:destroy]}, site_admin: :all
+  before_action :require_same_user, only: [:edit, :update, :destroy, :change_blog_status]
+
 
   def index
     if logged_in?(:user)
@@ -70,4 +72,12 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :body, :status, :user_id)
     end
+
+    def require_same_user
+      if current_user != @blog.user
+        notice = "You can only edit or delete your own blog posts!"
+        redirect_to root_path, notice: notice
+      end
+    end
+
 end
