@@ -11,12 +11,14 @@
   </head>
 
   <body>
+
     <%= render "shared/application_nav" %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
-    <%= yield %>
+    <div id="app" class="container">
+      <%= yield %>
+    </div>
 
     <!-- Page Footer-->
     <footer class="main-footer">

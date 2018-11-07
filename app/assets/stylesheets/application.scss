@@ -6,6 +6,35 @@
 * GENERAL
 * =====================
 */
+
+html  {
+  height:100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+#app  {
+  margin-bottom: 12rem;
+}
 .text-bold {
   font-weight: 700;
 }
@@ -14,9 +43,7 @@
   font-size: 0.9rem;
 }
 
-body {
-  overflow-x: hidden;
-}
+
 
 strong {
   font-weight: 700;
@@ -1045,6 +1072,8 @@ section.gallery .overlay i {
 *     FOOTER
 * ==========================================================
 */
+
+
 footer.main-footer {
   background: #0e0e0e;
   padding: 30px 0 0;
