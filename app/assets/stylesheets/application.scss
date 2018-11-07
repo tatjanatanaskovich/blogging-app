@@ -1,5 +1,6 @@
 /*Custom bootstrap variables must be set or imported *before* bootstrap.*/
 @import "bootstrap";
+@import "font-awesome";
 /*
 * =====================
 * GENERAL
@@ -1046,8 +1047,9 @@ section.gallery .overlay i {
 */
 footer.main-footer {
   background: #0e0e0e;
-  padding: 100px 0 0;
+  padding: 30px 0 0;
   color: #fff;
+  text-align: center;
 }
 
 footer.main-footer .contact-details p {
@@ -1058,7 +1060,7 @@ footer.main-footer .contact-details p {
 }
 
 footer.main-footer .contact-details a {
-  text-decoration: underline;
+  text-decoration: none;
   margin-bottom: 0;
 }
 
@@ -1066,6 +1068,7 @@ footer.main-footer a {
   color: inherit;
   font-weight: 300;
   margin-bottom: 7px;
+  text-decoration: none;
 }
 
 footer.main-footer a:hover, footer.main-footer a:focus {
@@ -1076,40 +1079,13 @@ footer.main-footer ul {
   margin-right: 30px;
 }
 
-footer.main-footer .list-unstyled a {
-  font-size: 0.95em;
-}
-
-footer.main-footer .latest-posts .image {
-  max-width: 50px;
-  padding: 4px;
-  border: 2px solid #333;
-  margin-right: 10px;
-}
-
-footer.main-footer .latest-posts a {
-  font-size: 0.95em;
-  text-decoration: none;
-}
-
-footer.main-footer .latest-posts a:hover {
-  color: #fff;
-}
-
-footer.main-footer .latest-posts strong {
-  display: block;
-}
-
-footer.main-footer .latest-posts .date {
-  font-size: 0.85em;
-  color: #aaa;
-}
 
 footer.main-footer .copyrights {
   background: #090909;
-  margin-top: 100px;
-  padding: 20px 0;
+  margin-top: 10px;
+  padding: 10px 0;
   font-size: 0.9em;
+  text-align: center;
 }
 
 footer.main-footer .copyrights * {
@@ -1118,10 +1094,14 @@ footer.main-footer .copyrights * {
 
 footer.main-footer .social-menu {
   margin-top: 20px;
+  color: white;
 }
 
 footer.main-footer .social-menu li {
   padding: 0 5px;
+}
+footer.main-footer .social-menu a {
+  color: white;
 }
 
 footer.main-footer .date::after,
@@ -1136,10 +1116,6 @@ footer.main-footer .title::after {
   }
   footer.main-footer div[class*="col-"]:last-of-type {
     margin-bottom: 0;
-  }
-  footer.main-footer .latest-posts > a {
-    width: 100%;
-    margin-bottom: 20px;
   }
   footer.main-footer .copyrights div[class*="col-"] {
     margin-bottom: 20px;
