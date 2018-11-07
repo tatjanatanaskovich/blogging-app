@@ -1,18 +1,29 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
-<p>
-  <strong>User name:</strong>
-  <%= @blog.user.name %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) if current_user == @blog.user %> |
-<%= link_to 'Back', blogs_path %>
+<div class="container">
+  <div class="row">
+    <main class="post blog-post col-lg-10"> 
+      <div class="container">
+        <div class="post-single">
+          <div class="post-details">
+            <div class="post-meta d-flex justify-content-between">
+              <div class="category"><a href="#">Category 1</a><a href="#">Category 2</a>
+                <div class="title"><span class='author d-flex align-items-center flex-wrap'>By <%= @blog.user.name %></span>
+                </div>
+              </div>
+            </div>
+            <h1><%= @blog.title %><a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
+            <div>
+              <div class="post-footer d-flex align-items-center flex-column flex-sm-row">
+              <%= link_to 'Edit this Post', edit_blog_path(@blog) if current_user == @blog.user %>
+            </div>
+              <div class="post-body">
+                <p><%= @blog.body %></p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<%= link_to 'Back to all Posts', blogs_path, class: 'btn btn-outline-info' %>

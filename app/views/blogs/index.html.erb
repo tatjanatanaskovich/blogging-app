@@ -1,7 +1,5 @@
 <h2>Hello, <%= current_user.first_name if current_user %> feel free to look around.</h2>
-
 <h1>Blogs</h1>
-
 <table>
   <thead>
     <tr>
@@ -11,7 +9,6 @@
       <th colspan="5"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
@@ -29,6 +26,4 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Blog', new_blog_path if logged_in?(:user) %>
