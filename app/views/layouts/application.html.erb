@@ -7,43 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
   </head>
-
   <body>
-
     <%= render "shared/application_nav" %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
     <div id="app" class="container">
       <%= yield %>
     </div>
-
-    <!-- Page Footer-->
-    <footer class="main-footer">
-      <div class="container">
-        <div class="logo">
-          <h6 class="text-white">Tatjana Tanaskovic</h6>
-        </div>
-        <div class="contact-details">
-          <p>Phone: +381 64 95 57 440</p>
-          <p>Email: <a href="mailto:tatjanatanaskovich@gmail.com">tatjanatanaskovich@gmail.com</a></p>
-          <p><a href="https://tatjanatanaskovich.github.io/" target="_blank">Tatjana Tanaskovic Portfolio Site</a> </p>
-          <ul class="social-menu">
-            <li class="list-inline-item"><a href="https://www.linkedin.com/in/tatjana-tanaskovic/" target="_blank"><%= fa_icon "linkedin" %></a></li>
-            <li class="list-inline-item"><a href="https://github.com/tatjanatanaskovich" target="_blank"><%= fa_icon "github" %></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/tatjana.tanaskovic/" target="_blank"><%= fa_icon 'instagram'%></a></li>
-            <li class="list-inline-item"><a href="https://twitter.com/Tatjana_Tanasko" target="_blank"><%= fa_icon 'twitter'%></a></li>
-          </ul>
-        </div>
-      </div>
-      </div>
-      <div class="copyrights">
-        <div class="container">
-          <a href="https://tatjanatanaskovich.github.io/" target="_blank"><p>&copy; Tatjana Tanaskovic </a> <%= Time.now.year %></p>
-        </div> 
-      </div>
-    </footer>
+    
+    <%= render "shared/application_footer" %>
   </body>
 </html>
