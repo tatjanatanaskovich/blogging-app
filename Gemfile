@@ -59,6 +59,6 @@ gem 'devise', '~> 4.5'
 gem "loofah", ">= 2.2.3"
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
-
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
