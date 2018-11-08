@@ -1,29 +1,10 @@
-<h2>Hello, <%= current_user.first_name if current_user %> feel free to look around.</h2>
-<h1>Blogs</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>User name</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= blog.user.name %></td>
-        <%  if logged_in?(:user) %>
-          <td><%= link_to blog.status, change_blog_status_blog_path(blog) %></td>
-          <td><%= link_to 'Show', blog %></td>
-          <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-          <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render @blogs %>
+<nav class="blog-pagination">
+  <a class="btn btn-outline-primary" href="#">Older</a>
+  <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+</nav>
 
 
+  
+    
+     

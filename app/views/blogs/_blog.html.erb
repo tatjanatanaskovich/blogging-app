@@ -1,0 +1,27 @@
+<main class="posts-listing col-lg-8"> 
+  <div class="container">
+    <div class="row">
+      <div class="post col-xl-6">
+        <h2 class="h4"><%= blog.title.upcase %></h2>
+          <p class="title">Written by: <%= blog.user.name %></p>
+        
+          <p class="date meta-last">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
+          <div class="post-details">
+          <div class="post-footer d-flex align-items-center">
+            <div id="users-links" class="comments meta-last">
+              <%= link_to blog.status, change_blog_status_blog_path(blog)  %>/
+              <%= link_to 'View this Post', blog %>/
+              <%= link_to 'Edit this Post', edit_blog_path(blog) %>/
+              <%= link_to 'Delete this Post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
+        </div>
+        <div class="post-body">
+          <p class="my-blog-post">
+            <%= blog.body %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

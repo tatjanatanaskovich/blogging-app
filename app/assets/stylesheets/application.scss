@@ -35,6 +35,18 @@ footer {
 #app  {
   margin-bottom: 12rem;
 }
+#users-links a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7B68EE;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+.my-blog-post {
+  margin: 0;
+}
+
+
 .text-bold {
   font-weight: 700;
 }
@@ -1156,13 +1168,13 @@ footer.main-footer .title::after {
 }
 
 main.posts-listing {
-  padding-top: 50px;
+  /*padding-top: 10px;*/
   padding-left: 0;
   padding-right: 0;
 }
 
 main.posts-listing .post {
-  margin-bottom: 50px;
+ /* margin-bottom: 10px;*/
 }
 
 main.posts-listing .post-footer {
@@ -1335,11 +1347,11 @@ main.posts-listing .post-footer {
 }
 
 .blog-post .post-footer {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .blog-post .post-body {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .blog-post .post-body h2,
@@ -1351,7 +1363,7 @@ main.posts-listing .post-footer {
 }
 
 .blog-post .post-body p {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .blog-post .post-body p:not(.lead) {
@@ -1361,7 +1373,7 @@ main.posts-listing .post-footer {
 }
 
 .blog-post .posts-nav {
-  margin-top: 50px;
+  margin-top: 10px;
   color: #777;
   font-size: 0.8em;
 }
@@ -1407,7 +1419,7 @@ main.posts-listing .post-footer {
 }
 
 .blog-post .post-comments {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .blog-post .post-comments span.no-of-comments {

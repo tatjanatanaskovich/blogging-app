@@ -13,6 +13,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
