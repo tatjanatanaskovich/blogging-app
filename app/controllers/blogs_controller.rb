@@ -1,7 +1,8 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :change_blog_status]
-  access all: [:show, :index], user: {except: [:destroy]}, site_admin: :all
   before_action :require_same_user, only: [:edit, :update, :destroy, :change_blog_status]
+
+  access all: [:show, :index], user: {except: [:destroy]}, site_admin: :all
 
 
   def index
@@ -13,7 +14,6 @@ class BlogsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -80,5 +80,4 @@ class BlogsController < ApplicationController
         redirect_to root_path, notice: notice
       end
     end
-
 end

@@ -13,7 +13,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates_presence_of :name
   has_many :blogs, dependent: :destroy
 
   def first_name
@@ -23,4 +22,6 @@ class User < ApplicationRecord
   def last_name
     self.name.split.last
   end
+
+  validates_presence_of :name
 end
